@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HahnAssessmentTask.Core.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace HahnAssessmentTask.Core.Interfaces.Services
 {
   public interface IStockService
   {
+    Task AddStock(Stock stock);
   }
 }
