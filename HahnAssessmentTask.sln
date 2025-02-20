@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HahnAssessmentTask.API", "src\HahnAssessmentTask.API\HahnAssessmentTask.API.csproj", "{170A854A-B6D3-42B3-B6E0-89E8465EEF17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HahnAssessmentTask.Core", "src\HahnAssessmentTask.Core\HahnAssessmentTask.Core.csproj", "{FA04D6EB-4555-4904-8338-5399231EF6AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HahnAssessmentTask.Application", "src\HahnAssessmentTask.Application\HahnAssessmentTask.Application.csproj", "{9C780F25-1829-4758-BB8F-0F09CE3E5B19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HahnAssessmentTask.Infrastructure", "src\HahnAssessmentTask.Infrastructure\HahnAssessmentTask.Infrastructure.csproj", "{3790F2AE-1D1B-4148-864C-CB2412FFA445}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HahnAssessmentTask.WorkerService", "src\HahnAssessmentTask.WorkerService\HahnAssessmentTask.WorkerService.csproj", "{3A2D66C8-7150-4996-AF90-5C15F30A80FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HahnAssessmentTask.HangFireJobs", "src\HahnAssessmentTask.HangFireJobs\HahnAssessmentTask.HangFireJobs.csproj", "{5F0A177A-A721-41BF-9F38-4F0E41AC7CEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{170A854A-B6D3-42B3-B6E0-89E8465EEF17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{170A854A-B6D3-42B3-B6E0-89E8465EEF17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{170A854A-B6D3-42B3-B6E0-89E8465EEF17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{170A854A-B6D3-42B3-B6E0-89E8465EEF17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA04D6EB-4555-4904-8338-5399231EF6AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA04D6EB-4555-4904-8338-5399231EF6AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA04D6EB-4555-4904-8338-5399231EF6AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA04D6EB-4555-4904-8338-5399231EF6AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C780F25-1829-4758-BB8F-0F09CE3E5B19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C780F25-1829-4758-BB8F-0F09CE3E5B19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C780F25-1829-4758-BB8F-0F09CE3E5B19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C780F25-1829-4758-BB8F-0F09CE3E5B19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3790F2AE-1D1B-4148-864C-CB2412FFA445}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3790F2AE-1D1B-4148-864C-CB2412FFA445}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3790F2AE-1D1B-4148-864C-CB2412FFA445}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3790F2AE-1D1B-4148-864C-CB2412FFA445}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A2D66C8-7150-4996-AF90-5C15F30A80FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A2D66C8-7150-4996-AF90-5C15F30A80FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A2D66C8-7150-4996-AF90-5C15F30A80FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A2D66C8-7150-4996-AF90-5C15F30A80FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F0A177A-A721-41BF-9F38-4F0E41AC7CEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F0A177A-A721-41BF-9F38-4F0E41AC7CEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F0A177A-A721-41BF-9F38-4F0E41AC7CEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F0A177A-A721-41BF-9F38-4F0E41AC7CEA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BBAA5D90-7209-42D7-9289-B06F86343689}
+	EndGlobalSection
+EndGlobal
