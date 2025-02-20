@@ -16,7 +16,7 @@ namespace HahnAssessmentTask.Infrastructure.Context
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
       modelBuilder.Entity<Stock>().HasKey(e => e.Symbol);
-      modelBuilder.Entity<StockDailyInformation>().HasKey(e => new { e.Stock.Symbol, e.Date });
+      modelBuilder.Entity<StockDailyInformation>().HasKey(e => new { e.StockSymbol, e.Date });
     }
   }
 }

@@ -16,6 +16,7 @@ namespace HahnAssessmentTask.Core.Entities
     public required double Volume { get; set; }
 
     // Relationships
+    public required string StockSymbol { get; set; }
     public required Stock Stock { get; set; }
   }
 }
