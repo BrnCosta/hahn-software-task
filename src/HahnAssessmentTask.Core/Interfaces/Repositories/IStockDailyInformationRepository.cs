@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HahnAssessmentTask.Core.Interfaces.Repositories
 {
-  public interface IStockDailyInformation : IBaseRepository<StockDailyInformation>
+  public interface IStockDailyInformationRepository : IBaseRepository<StockDailyInformation>
   {
   }
 }

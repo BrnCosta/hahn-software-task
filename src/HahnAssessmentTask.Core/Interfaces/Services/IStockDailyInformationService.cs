@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HahnAssessmentTask.Core.Interfaces.Services
 {
-  public interface IStockDailyInformation
+  public interface IStockDailyInformationService
   {
   }
 }
