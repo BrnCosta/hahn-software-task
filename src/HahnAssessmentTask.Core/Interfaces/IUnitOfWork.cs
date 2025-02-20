@@ -10,7 +10,7 @@ namespace HahnAssessmentTask.Core.Interfaces
   public interface IUnitOfWork
   {
     IStockRepository StockRepository { get; }
-    IStockDailyInformationRepository StockDailyInformation { get; }
+    IStockDailyInformationRepository StockDailyInformationRepository { get; }
     Task Commit();
   }
 }
