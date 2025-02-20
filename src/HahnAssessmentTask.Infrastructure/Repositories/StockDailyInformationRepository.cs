@@ -1,5 +1,6 @@
 ﻿using HahnAssessmentTask.Core.Entities;
 using HahnAssessmentTask.Core.Interfaces.Repositories;
+using HahnAssessmentTask.Infrastructure.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,26 +9,8 @@ using System.Threading.Tasks;
 
 namespace HahnAssessmentTask.Infrastructure.Repositories
 {
-  public class StockDailyInformationRepository : IStockDailyInformationRepository
+  public class StockDailyInformationRepository(AppDbContext context) 
+    : BaseRepository<StockDailyInformation>(context), IStockDailyInformationRepository
   {
-    public void Create(StockDailyInformation entity)
-    {
-      throw new NotImplementedException();
-    }
-
-    public void Delete(StockDailyInformation entity)
-    {
-      throw new NotImplementedException();
-    }
-
-    public IEnumerable<StockDailyInformation> GetAll()
-    {
-      throw new NotImplementedException();
-    }
-
-    public void Update(StockDailyInformation entity)
-    {
-      throw new NotImplementedException();
-    }
   }
 }
