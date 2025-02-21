@@ -29,5 +29,10 @@ namespace HahnAssessmentTask.Application.Services
         throw new ApplicationException($"Failed to insert stock item '{stock.Symbol}'. Details: {e.Message}", e);
       }
     }
+
+    public IEnumerable<Stock> GetAllStocks()
+    {
+      return _unitOfWork.StockRepository.GetAll();
+    }
   }
 }

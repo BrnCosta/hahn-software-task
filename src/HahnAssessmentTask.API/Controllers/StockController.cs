@@ -28,5 +28,11 @@ namespace HahnAssessmentTask.API.Controllers
         return BadRequest(e.Message);
       }
     }
+
+    [HttpGet]
+    public IActionResult GetAllStocks()
+    {
+      return Ok(_stockService.GetAllStocks());
+    }
   }
 }
