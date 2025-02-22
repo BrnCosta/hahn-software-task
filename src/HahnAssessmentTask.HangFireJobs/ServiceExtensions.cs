@@ -1,8 +1,4 @@
-﻿using HahnAssessmentTask.Application.Services;
-using HahnAssessmentTask.Core.Interfaces.Repositories;
-using HahnAssessmentTask.Core.Interfaces;
-using HahnAssessmentTask.Core.Interfaces.Services;
-using HahnAssessmentTask.HangFireJobs.Jobs;
+﻿using HahnAssessmentTask.HangFireJobs.Jobs;
 using Hangfire;
 using Hangfire.SqlServer;
 using Microsoft.Extensions.DependencyInjection;
