@@ -6,7 +6,7 @@ namespace HahnAssessmentTask.Infrastructure.Context
   public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
   {
     public DbSet<Stock> Stocks { get; set; }
-    public DbSet<StockDailyInformation> StockDailyInformation { get; set; }
+    public DbSet<StockDailyInformation> StockDailyInformations { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

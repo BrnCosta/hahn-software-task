@@ -2,7 +2,7 @@
 {
   public class StockDailyInformation
   {
-    public required DateTime Date { get; set; }
+    public required DateOnly Date { get; set; }
     public required double Open { get; set; }
     public required double Close { get; set; }
     public required double High { get; set; }
