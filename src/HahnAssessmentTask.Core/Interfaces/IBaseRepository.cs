@@ -6,5 +6,6 @@
     void Update(T entity);
     void Delete(T entity);
     IEnumerable<T> GetAll();
+    void Attach(T entity);
   }
 }

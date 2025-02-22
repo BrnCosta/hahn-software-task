@@ -23,9 +23,8 @@ namespace HahnAssessmentTask.Infrastructure.Repositories
       _context.Update(entity);
     }
 
-    public IEnumerable<T> GetAll()
-    {
-      return _context.Set<T>().AsNoTracking();
-    }
+    public IEnumerable<T> GetAll() => _context.Set<T>().AsNoTracking().ToList();
+
+    public void Attach(T entity) => _context.Attach(entity);
   }
 }

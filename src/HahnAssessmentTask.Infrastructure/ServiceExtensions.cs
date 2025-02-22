@@ -27,6 +27,7 @@ namespace HahnAssessmentTask.Infrastructure
 
       // Services
       services.AddScoped<IStockService, StockService>();
+      services.AddScoped<IStockDailyInformationService, StockDailyInformationService>();
 
       // Unit of Work
       services.AddScoped<IUnitOfWork, UnitOfWork>();
