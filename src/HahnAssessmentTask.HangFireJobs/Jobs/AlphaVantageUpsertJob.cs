@@ -26,7 +26,7 @@ namespace HahnAssessmentTask.HangFireJobs.Jobs
 
           foreach (var stock in stocks)
           {
-            StockDailyDataDto? stockDailyInfo = await GetStockDailyInfo(stock.Symbol);
+            StockDailyDataDto? stockDailyInfo = await GetStockDailyInfo(stock);
 
             if (stockDailyInfo == null)
               continue;
@@ -37,14 +37,27 @@ namespace HahnAssessmentTask.HangFireJobs.Jobs
       }
     }
 
-    private async Task<StockDailyDataDto?> GetStockDailyInfo(string symbol)
+    private async Task<StockDailyDataDto?> GetStockDailyInfo(Stock stock)
     {
 #if DEBUG
       var apiKey = "demo";
 #else
       var apiKey = Environment.GetEnvironmentVariable("ALPHA_VANTAGE_API_KEY");
 #endif
-      var response = await _httpClient.GetAsync($"{_AlphaVantageUrl}&symbol={symbol}&apikey={apiKey}");
+      string symbolParameter;
+
+      if (string.Equals(stock.StockExchange.ToString(), "US", StringComparison.OrdinalIgnoreCase))
+      {
+        symbolParameter = stock.Symbol;
+      }
+      else
+      {
+        symbolParameter = $"{stock.Symbol}.{stock.StockExchange}";
+      }
+
+      var requestUrl = $"{_AlphaVantageUrl}&symbol={symbolParameter}&apikey={apiKey}";
+
+      var response = await _httpClient.GetAsync(requestUrl);
 
       if (!response.IsSuccessStatusCode)
         return null;
@@ -73,7 +86,7 @@ namespace HahnAssessmentTask.HangFireJobs.Jobs
       if (timeSeries == null)
         return null;
 
-      var dailyData = timeSeries[lastRefreshed] ?? timeSeries[date.ToString("yyyy-MM-dd")];
+      var dailyData = timeSeries[date.ToString("yyyy-MM-dd")];
 
       if (dailyData == null)
         return null;

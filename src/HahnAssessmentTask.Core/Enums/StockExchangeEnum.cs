@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HahnAssessmentTask.Core.Enums
 {
-  public enum StockExchange
+  public enum StockExchangeEnum
   {
     [Description("United States")]
     US,

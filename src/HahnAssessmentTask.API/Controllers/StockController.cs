@@ -27,7 +27,11 @@ namespace HahnAssessmentTask.API.Controllers
       {
         return Conflict("Stock already exists");
       }
-      catch (ApplicationException e)
+      catch (ArgumentException e)
+      {
+        return StatusCode(422, e.Message);
+      }
+      catch (Exception e)
       {
         return BadRequest(e.Message);
       }
@@ -42,8 +46,8 @@ namespace HahnAssessmentTask.API.Controllers
     [HttpGet("exchanges")]
     public IActionResult GetStockExchanges()
     {
-      var exchanges = Enum.GetValues(typeof(StockExchange))
-                          .Cast<StockExchange>()
+      var exchanges = Enum.GetValues(typeof(StockExchangeEnum))
+                          .Cast<StockExchangeEnum>()
                           .Select(exchange => new StockExchangeDto
                           {
                             Value = exchange.ToString(),

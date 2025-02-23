@@ -1,4 +1,5 @@
 ﻿using HahnAssessmentTask.Core.Entities;
+using HahnAssessmentTask.Core.Enums;
 using HahnAssessmentTask.Core.Interfaces;
 using HahnAssessmentTask.Core.Interfaces.Services;
 using System.Data;
@@ -11,6 +12,11 @@ namespace HahnAssessmentTask.Application.Services
 
     public async Task AddStock(Stock stock)
     {
+      if (!Enum.TryParse<StockExchangeEnum>(stock.StockExchange, ignoreCase: true, out _))
+      {
+        throw new ArgumentException($"Stock exchange '{stock.StockExchange}' is invalid.");
+      }
+
       var existingStock = await _unitOfWork.StockRepository.GetBySymbolAsync(stock.Symbol);
 
       if(existingStock != null)
