@@ -13,5 +13,14 @@ namespace HahnAssessmentTask.Infrastructure.Repositories
       return await _context.StockDailyInformations
         .FirstOrDefaultAsync(s => s.Date == date && s.Stock.Symbol == stockSymbol);
     }
+
+    public IEnumerable<StockDailyInformation> GetAllDailyInfosAsync(DateOnly date)
+    {
+      return _context.StockDailyInformations
+        .Where(s => s.Date == date)
+        .Include(s => s.Stock)
+        .AsNoTracking()
+        .ToList();
+    }
   }
 }

@@ -6,5 +6,6 @@ namespace HahnAssessmentTask.Core.Interfaces.Services
   public interface IStockDailyInformationService
   {
     Task UpsertDailyInformation(Stock stock, StockDailyDataDto stockDailyInfo, DateOnly dateNow);
+    IEnumerable<StockDailyInformation> GetAllDailyInfos(DateOnly date);
   }
 }

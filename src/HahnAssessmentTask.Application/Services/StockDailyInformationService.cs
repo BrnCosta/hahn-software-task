@@ -9,6 +9,11 @@ namespace HahnAssessmentTask.Application.Services
   {
     protected readonly IUnitOfWork _unitOfWork = unitOfWork;
 
+    public IEnumerable<StockDailyInformation> GetAllDailyInfos(DateOnly date)
+    {
+      return _unitOfWork.StockDailyInformationRepository.GetAllDailyInfosAsync(date);
+    }
+
     public async Task UpsertDailyInformation(Stock stock, StockDailyDataDto stockDailyInfo, DateOnly dateNow)
     {
       StockDailyInformation? existingStockDailyInfo = await _unitOfWork.StockDailyInformationRepository.GetDailyInfoAsync(dateNow, stock.Symbol);
