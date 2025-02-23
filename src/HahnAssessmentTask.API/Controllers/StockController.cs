@@ -1,6 +1,10 @@
-﻿using HahnAssessmentTask.Core.Entities;
+﻿using HahnAssessmentTask.Core.DTOs;
+using HahnAssessmentTask.Core.Entities;
+using HahnAssessmentTask.Core.Enums;
+using HahnAssessmentTask.Core.Extensions;
 using HahnAssessmentTask.Core.Interfaces.Services;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Data;
 
 namespace HahnAssessmentTask.API.Controllers
@@ -30,9 +34,24 @@ namespace HahnAssessmentTask.API.Controllers
     }
 
     [HttpGet]
-    public IActionResult GetAllStocks()
+    public IActionResult AllStocks()
     {
       return Ok(_stockService.GetAllStocks());
+    }
+
+    [HttpGet("exchanges")]
+    public IActionResult GetStockExchanges()
+    {
+      var exchanges = Enum.GetValues(typeof(StockExchange))
+                          .Cast<StockExchange>()
+                          .Select(exchange => new StockExchangeDto
+                          {
+                            Value = exchange.ToString(),
+                            Description = exchange.GetDescription()
+                          })
+                          .ToList();
+
+      return Ok(exchanges);
     }
   }
 }
