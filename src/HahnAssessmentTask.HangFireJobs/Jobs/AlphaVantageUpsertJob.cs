@@ -39,11 +39,8 @@ namespace HahnAssessmentTask.HangFireJobs.Jobs
 
     private async Task<StockDailyDataDto?> GetStockDailyInfo(Stock stock)
     {
-#if DEBUG
-      var apiKey = "demo";
-#else
       var apiKey = Environment.GetEnvironmentVariable("ALPHA_VANTAGE_API_KEY");
-#endif
+
       string symbolParameter;
 
       if (string.Equals(stock.StockExchange.ToString(), "US", StringComparison.OrdinalIgnoreCase))
